@@ -14,7 +14,7 @@ git add .
 
 # - Додає всі зміни
 
-# або
+або
 
 git add path/to/file
 
