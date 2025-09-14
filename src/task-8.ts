@@ -1,47 +1,24 @@
-// Дано
-// Функція fetchPosts робить GET-запит до API та повертає список постів.
-
-// import axios from "axios";
-
-// async function fetchPosts() {
-//   const response = await axios.get(
-//     '<https://jsonplaceholder.typicode.com/posts>'
-//   );
-//   return response.data;
-// }
-
-// fetchPosts().then((posts) => {
-//   console.log(posts[0].title);
-// });
-
-
-
-// Завдання:
-
-// Інсталюй бібліотеку axios командою npm i axios
-// Створи інтерфейс Post, який описує об'єкт поста з такими полями:
-// id: число
-// title: рядок
-// body: рядок
-// 3. Типізуй axios.get, щоб вказати, що API повертає масив постів.
-
-// ВИКОНАННЯ
-
+// Оголошення інтерфейсу для постів
 interface Post {
-    id: number;
-    title: string;
-    body: string;
+    id: number;     // Ідентифікатор посту
+    title: string;  // Заголовок посту
+    body: string;   // Тіло посту
 }
 
+// Імпорт бібліотеки axios для HTTP-запитів
 import axios from "axios";
 
+// Асинхронна функція для отримання постів
 async function fetchPosts(): Promise<Post[]> {
+  // Виконання GET-запиту та очікування результату
   const response = await axios.get<Post[]>(
     "https://jsonplaceholder.typicode.com/posts"
   );
+  // Повертаємо масив постів з відповіді
   return response.data;
 }
 
+// Виклик функції та вивід заголовку першого посту
 fetchPosts().then((posts) => {
   console.log(posts[0].title);
 });

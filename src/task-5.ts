@@ -1,38 +1,25 @@
-// Дано
-// Функція logStatus приймає рядок status і виводить відповідне повідомлення.
-
-// function logStatus(status) {
-//   if (status === "loading") {
-//     console.log("Loading...");
-//   } else if (status === "success") {
-//     console.log("Success!");
-//   } else if (status === "error") {
-//     console.log("Something went wrong");
-//   }
-// }
-
-// logStatus("loading");
-
-// Завдання:
-
-// Типізуй параметр status так, щоб дозволити тільки три конкретні рядкові значення: "loading", "success", "error"
-// Переконайся, що TypeScript не дозволяє передати будь-яке інше значення.
-// Типізуй повернення функції, зауваж що вона нічого явно не повертає.
-// Залиш реалізацію функції без змін.
-
-
-// ВИКОНАННЯ
+// Тип, що може приймати лише три рядкові значення
 type StatusLoadorSuccessorError = "loading" | "success" | "error";
 
+// Функція для виводу повідомлення залежно від статусу
 function logStatus(status: StatusLoadorSuccessorError): void {
+  // Якщо статус "loading"
   if (status === "loading") {
     console.log("Loading...");
+  // Якщо статус "success"
   } else if (status === "success") {
     console.log("Success!");
+  // Якщо статус "error"
   } else if (status === "error") {
     console.log("Something went wrong");
   }
 }
+
+// Виклик функції зі статусом "loading"
 logStatus("loading");
+
+// Виклик функції зі статусом "success"
 logStatus("success");
-logStatus("error"); 
+
+// Виклик функції зі статусом "error"
+logStatus("error");

@@ -1,21 +1,11 @@
-// Типізуємо
-interface User {
-    name: string;
-    age: number;
-    isOnline: boolean;
-}
+// Змінна name типу string
+const name: string = "Alice";
 
-//  Створюємо об’єкт user типу User
-//   і заповнюємо його полями
-const user: User = {
-    name: "Alice",
-    age: 30,
-    isOnline: true,
-}
+// Змінна age типу number
+const age: number = 30;
 
+// Змінна isOnline типу boolean
+const isOnline: boolean = true;
 
-// Виводимо
-console.log(user)
-
-// Результат:
-// {name: 'Alice', age: 30, isOnline: true}
+// Вивід усіх змінних у консоль
+console.log(name, age, isOnline);

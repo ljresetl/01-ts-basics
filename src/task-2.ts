@@ -1,35 +1,21 @@
-// ДАНО
-// обьєкт продукт
-// const product = {
-//     id: 1,
-//     title: "Tablet",
-//     description: "Compact and Fast",
-// };
-// console.log(`Product: ${JSON.stringify(product)}`);
-
-// ЗАВДАННЯ
-// Створи інтерфейс Product, який описує структуру цього об’єкта.
-// Зроби поле id тільки для читання – воно не повинно змінюватись після створення об’єкта.
-// Зроби поле description необов’язковим – не всі товари можуть його мати.
-// Типізуй змінну product за допомогою створеного інтерфейсу.
-// Залиш властивості обʼєкта product і їх значення без змін.
-
-// Типізуємо
+// Оголошення інтерфейсу Product
 interface Product {
-    id: number;
+    // Унікальний ідентифікатор (тільки для читання)
+    readonly id: number; 
+    
+    // Необов’язковий опис
     description?: string;
+    
+    // Заголовок (назва товару)
     title: string;
 }
-//  Створюємо об’єкт product типу Product
-//   і заповнюємо його полями
+
+// Створення об’єкта product, що відповідає інтерфейсу Product
 const product: Product = {
     id: 1,
     title: "Tablet",
     description: "Compact and Fast",
 }
 
-// Виводимо в консоль об’єкт product у вигляді рядка JSON
-// JSON.stringify(product) перетворює об’єкт на рядок, 
-// щоб його можна було вставити в шаблонний рядок
+// Вивід об’єкта product у консоль у форматі JSON
 console.log(`Product: ${JSON.stringify(product)}`);
-

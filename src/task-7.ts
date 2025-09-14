@@ -1,29 +1,14 @@
-// Дано
-// Функція getMessage повертає проміс, який через затримку повертає рядок.
-
-// function getMessage() {
-//   return new Promise((resolve) => {
-//     setTimeout(() => {
-//       resolve("Hello from TS");
-//     }, 1000);
-//   });
-// }
-
-// getMessage().then(result => console.log(result));
-
-// Завдання:
-
-// Додай до функції явну типізацію, яка вказує, що вона повертає проміс.
-// Переконайся, що значення, з яким виконається проміс, – це рядок (string).
-
-// ВИКОНАННЯ
-
+// Функція, що повертає проміс із рядком
 function getMessage (): Promise<string> {
-     return new Promise((resolve) => {
-    setTimeout(() => {
-      resolve("Hello from TS");
-    }, 1000);
-  });
+    // Створюємо новий проміс
+    return new Promise((resolve) => {
+        // Виконуємо затримку на 1 секунду
+        setTimeout(() => {
+            // Повертаємо результат у вигляді рядка
+            resolve("Hello from TS");
+        }, 1000);
+    });
 }
 
+// Виклик функції та вивід результату після виконання промісу
 getMessage().then(result => console.log(result));

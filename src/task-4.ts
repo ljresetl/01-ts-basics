@@ -1,33 +1,17 @@
-// Дано
-// Функція printUserInfo виводить інформацію про користувача, включаючи ім’я, вік і (опціонально) email.
-
-// function printUserInfo(name, age, email) {
-//   console.log("Name:", name);
-//   console.log("Age:", age);
-//   if (email) {
-//     console.log("Email:", email);
-//   }
-// }
-
-// printUserInfo("Alice", 30);
-// printUserInfo("Bob", 25, "bob@mail.com");
-
-// ЗАВДАННЯ
-
-// Додай явну типізацію до параметрів функції: name, age та email.
-// Зроби параметр email опціональним – щоб функція могла працювати як з ним, так і без нього.
-// Типізуй повернення функції, зауваж що вона нічого явно не повертає.
-// Залиш реалізацію функції без змін.
-
-// ВИКНАННЯ
-
+// Функція для виводу інформації про користувача (email необов’язковий)
 function printUserInfo(name: string, age: number, email?: string): void {
+    // Вивід імені у консоль
     console.log("Name:", name);
+    // Вивід віку у консоль
     console.log("Age:", age);
+    // Якщо email передано – вивести його
     if (email) {
         console.log("Email:", email);
     }
 }
 
+// Виклик функції без email
 printUserInfo("Alice", 30);
+
+// Виклик функції з email
 printUserInfo("Bob", 25, "bob@MediaList.com");

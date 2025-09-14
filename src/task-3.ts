@@ -1,40 +1,28 @@
-// Дано масив обьєктів
-// const usernames = ["alice", "bob", "charlie"];
-// const ratings = [4.5, 3.8, 5];
-// const products = [
-//     { id: 1, title:"Phone" },
-//     { id: 2, title:"Laptop"},
-// ];
-
-// console.log(`Usernames: ${JSON.stringify(usernames)}`);
-// console.log(`Rating: ${JSON.stringify(ratings)}`);
-// console.log(`Products: ${JSON.stringify(products)}`);
-
-// Завдання:
-
-// Додай тип для масиву рядків usernames, використовуючи синтаксис [].
-// Додай тип для масиву чисел ratings, використовуючи синтаксис [].
-// Для масиву products:
-// Створи окремий інтерфейс Product для елементів масиву.
-// Типізуй сам масив за допомогою цього інтерфейсу.
-// 4. Залиш елементи масиву products без змін.
-
-
-// ВИКОНАННЯ
-
+// Масив рядків із іменами користувачів
 const usernames: string[] = ["alice", "bob", "charlie"];
+
+// Масив чисел з оцінками
 const ratings: number[] = [4.5, 3.8, 5];
+
+// Оголошення інтерфейсу для продуктів
 interface Products {
+    // Ідентифікатор продукту
     id: number;
+    // Назва продукту
     title: string;
 }
 
+// Масив об’єктів, що відповідають інтерфейсу Products
 const products: Products[] = [
     { id: 1, title:"Phone" },
     { id: 2, title:"Laptop"},
- ];
+];
 
-
+// Вивід масиву usernames у консоль у форматі JSON
 console.log(`Usernames: ${JSON.stringify(usernames)}`);
+
+// Вивід масиву ratings у консоль у форматі JSON
 console.log(`Rating: ${JSON.stringify(ratings)}`);
+
+// Вивід масиву products у консоль у форматі JSON
 console.log(`Products: ${JSON.stringify(products)}`);
