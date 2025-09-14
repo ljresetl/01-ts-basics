@@ -1,8 +1,8 @@
 // Тип, що може приймати лише три рядкові значення
-type StatusLoadorSuccessorError = "loading" | "success" | "error";
+type Status = "loading" | "success" | "error";
 
 // Функція для виводу повідомлення залежно від статусу
-function logStatus(status: StatusLoadorSuccessorError): void {
+function logStatus(status: Status): void {
   // Якщо статус "loading"
   if (status === "loading") {
     console.log("Loading...");
